@@ -5,7 +5,7 @@ seoDescription: "Java guide with syntax and code for variables, data types, cont
 datePublished: Sun Aug 17 2025 11:23:12 GMT+0000 (Coordinated Universal Time)
 cuid: cmeflkoia000m02l531e5g307
 slug: java-quick-refresher
-cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755429628666/0d7a90f6-8201-4a58-8b32-c7c599195e62.jpeg
+cover: https://cdn.hashnode.com/res/hashnode/image/upload/v1755429993053/dfcdace6-053f-4c22-ba01-0d04de5a4a20.webp
 tags: java-programming-collections-sdet-dsa-refresher-notes
 
 ---

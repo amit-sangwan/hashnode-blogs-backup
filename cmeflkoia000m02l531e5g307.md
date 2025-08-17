@@ -86,6 +86,7 @@ Java is **statically typed**, so every variable must have a type.
 String str = "Hello";
 int[] arr = {1,2,3};
 Integer num = 10;
+int[] arr = new int[4];
 ```
 
 ### **Type Casting**
@@ -218,7 +219,7 @@ String s2 = new String("Hello"); // heap
 | --- | --- | --- |
 | length() | String length | "Hello".length() → 5 |
 | charAt(i) | Char at index | "Java".charAt(2) → 'v' |
-| substring(b,e) | Substring \[b,e) | "abcdef".substring(1,4) → "bcd" |
+| substring(b,e) (last index not included ) | Substring \[b,e) | "abcdef".substring(1,4) → "bcd" |
 | contains(str) | Check substring | "Hello".contains("ell") → true |
 | equals(str) | Compare content | "abc".equals("abc") → true |
 | equalsIgnoreCase(str) | Case-insensitive | "Java".equalsIgnoreCase("java") → true |
@@ -305,7 +306,64 @@ int[][] matrix = {{1,2,3},{4,5,6},{7,8,9}};
 System.out.println(matrix[1][2]); // 6
 ```
 
-**Useful Arrays Class Methods**
+## Common Methods in `Arrays` Class
+
+This `Arrays` class provides **static helper methods** for working with arrays (sorting, searching, comparing, filling, etc.).
+
+### 1\. **Sorting**
+
+```http
+int[] arr = {5, 2, 8, 1};
+Arrays.sort(arr);
+System.out.println(Arrays.toString(arr)); // [1, 2, 5, 8]
+```
+
+### 2\. **Binary Search (on a sorted array)**
+
+```http
+int[] arr = {1, 2, 5, 8};
+int index = Arrays.binarySearch(arr, 5); 
+System.out.println(index); // 2 (0-based index)
+```
+
+### 3\. **Fill an Array**
+
+```http
+int[] arr = new int[5];
+Arrays.fill(arr, 10);
+System.out.println(Arrays.toString(arr)); // [10, 10, 10, 10, 10]
+```
+
+### 4\. **Compare Arrays**
+
+```http
+int[] a1 = {1, 2, 3};
+int[] a2 = {1, 2, 3};
+System.out.println(Arrays.equals(a1, a2)); // true
+```
+
+### 5\. **Convert to String**
+
+```http
+String[] names = {"Amit", "Rahul", "Neha"};
+System.out.println(Arrays.toString(names)); // [Amit, Rahul, Neha]
+```
+
+### 6\. **Copying Arrays**
+
+```http
+int[] arr = {1, 2, 3, 4};
+int[] copy = Arrays.copyOf(arr, 6);
+System.out.println(Arrays.toString(copy)); // [1, 2, 3, 4, 0, 0]
+```
+
+### 7\. **Parallel Sorting (for large arrays, uses multi-threading)**
+
+```http
+int[] arr = {5, 1, 3, 2, 4};
+Arrays.parallelSort(arr);
+System.out.println(Arrays.toString(arr)); // [1, 2, 3, 4, 5]
+```
 
 ```http
 Arrays.sort(arr);
